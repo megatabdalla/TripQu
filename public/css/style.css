@@ -1,0 +1,422 @@
+.bg-tq{
+    background-color: #697efe;
+}
+
+.container{
+    margin-left: 4%;
+}
+
+.navbar a{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar a:hover{
+    color: #B6FFFA;
+}
+
+.navbar-brand{
+    margin-right: 47%; 
+}
+
+.navbar-text{
+    margin-right: -65%;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    height: 50vh;
+    vertical-align: top;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* .container-fluid{
+    background-color: #80B3FF;
+    height: 100hv;
+} */
+
+.header {
+    padding: 10%;
+    text-align: left;
+    background: #80B3FF;
+    color: white;
+    font-size: 30px;
+  }
+
+h6{
+    margin-top: 2%;
+    color: black;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.material-symbols-outlined{
+    color: white;
+    margin-right: 1%;
+}
+
+button{
+    background-color: #80B3FF;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 4px;
+}
+
+.srch{
+    background-color: white;
+    position: relative;
+    top: 52%;
+    left: 25%;
+    right: -50%;
+    margin-top: -52px;
+    margin-left: -50px;
+    margin-right: 50%;
+    border-radius: 6px;
+    padding: 1%;
+    box-shadow: 0 4px 4px -4px gray;
+}
+
+.type{
+    border-radius: 4px;
+    /* padding: 5%; */
+    margin-bottom: 3%;
+    width: 25%;
+    font-size: 12px;
+}
+
+.form-floating{
+    margin-right: 2%;
+    border-radius: 4px;
+}
+
+.butlog{
+    color: rgb(49, 49, 49);
+    background-color: #80B3FF;
+    position:relative;
+    font-size: 18px;
+    padding: 2%;
+    width: 30%;
+    border-radius: 6px;
+    margin-top: 2%;
+    float: right;
+}
+
+.butreg{
+    background-color: #697efe;
+    position:relative;
+    font-size: 18px;
+    padding: 1%;
+    width: 15%;
+    border-radius: 4px;
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+
+.cari{
+    background-color: #697efe;
+    position:absolute;
+    top: 153%;
+    left: 70%;
+    margin-top: -11%;
+    font-size: 20px;
+    padding: 2%;
+    width: 26%;
+    box-shadow: 0 4px 4px -4px gray;
+}
+
+.pop h1{
+    margin-top: 15%;
+    margin-left: 40%;
+    margin-bottom: 5%;
+}
+
+.pop{
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 15%;
+}
+
+.Auth{
+    color: black;
+    background-color: rgb(245, 251, 255);
+    border-radius: 8px;
+    float: right;
+    padding: 1%;
+    height: 55vh;
+    width: 22%;
+    margin-top: -15%;
+    margin-right: 8%;
+}
+
+.reg{
+    text-align: right;
+    margin-top: -22%;
+    float: right;
+}
+
+.logmail{
+    margin-top: 20%;
+}
+
+/* .auth label{
+    margin-right: 2%;
+}
+
+.auth input{
+    width: 100%;
+}
+
+.auth h1{
+    margin-top: -10%;
+    margin-bottom: 10%;
+    text-align: center;
+}
+
+.auth p{
+    text-align: right;
+}
+
+.auth a{
+    color: black;
+}
+
+.reg .form-floating{
+    margin-top: 9%;
+    border-radius: 16px;
+    border-color: black;
+} */
+
+.result{
+    background-color: #80B3FF;
+    width: 68%;
+    margin-top: 4%;
+    margin-left: 15%;
+    padding: 2%;
+    color: white;
+}
+
+.tujuan{
+    font-size: 18px;
+    margin-left: 5%;
+}
+
+.ubah{
+    float: right;
+    border-radius: 4px;
+    background-color: #697efe;
+    padding: 1%;
+    margin-top: -5%;
+}
+
+.class{
+    float: right;
+    background-color: orange;
+    text-align: center;
+    width: 4%;
+    margin-right: 72%;
+    margin-top: 7px;
+    font-size: 12px;
+}
+
+.filter{
+    float: left;
+    background-color: #80B3FF;
+    width: 12%;
+    color: white;
+    padding: 1%;
+    margin-top: -1167px;
+    margin-left: 15%;
+    height: 122.5vh;
+}
+
+.filter h4{
+    text-align: center;
+}
+
+.filter p{
+    margin-top: 25%;
+    font-size: 18px;
+}
+
+.filter button{
+    background-color: #697efe;
+    border-radius: 1px;
+    padding: 2%;
+    width: 90%;
+    margin-top: 7%;
+}
+
+.agen{
+    margin-bottom: 2%;
+}
+
+.tgl{
+    background-color: #80B3FF;
+    margin-left: 30%;
+    margin-top: 2%;
+    margin-right: 17%;
+    padding: 5px;
+}
+
+.tgl button{
+    padding: 10%;
+    border-radius: 4px;
+}
+
+.tgl button:hover{
+    background-color: #697efe;
+}
+
+.tgl span{
+    margin-top: 9%;
+    padding: -10px;
+}
+
+.tiket{
+    margin-top: 3%;
+    background-color: #80B3FF;
+    color: white;
+    margin-left: 30%;
+    margin-right: 17%;
+    position: relative;
+    padding: 1%;
+    border-radius: 2px;
+}
+
+.tiket .position-absolute{
+    background-color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin-right: 20%;
+    margin-top: -1%;
+    margin-bottom: -1%;
+}
+
+.tiket img{
+    width: 30%;
+}
+
+.book{
+    background-color: orange;
+    margin-left: 24%;
+    padding: 4%;
+    text-align: center;
+    border-radius: 2px;
+}
+
+.tiket .position-absoluted{
+    background-color: black;
+    width: 3px;
+    height: 6px;
+    margin-left: 76.9%;
+    position: absolute;
+    bottom: 1;
+    margin-top: -1px;
+}
+
+.kepala{
+    background-color: #80B3FF;
+    padding: 1%;
+    text-align: center;
+    color: white;
+    margin-top: 7%;
+    width: 85%;
+    margin-left: 7%;
+}
+
+/* .list{
+    width: 0.3%;
+    height: 30px;
+    margin-left: 7%;
+    margin-top: 2%;
+    position: relative;
+    background-color: #B6FFFA;
+    color: #B6FFFA;
+} */
+
+.detail h5{
+    margin-top: 2%;
+    margin-left:7%;
+}
+
+.detail .row{
+    margin-top: 1%;
+    margin-left:7%;
+    width: 85%;
+    margin-left: 6.2%;
+}
+
+.detail span{
+    color: black;
+}
+
+.kelas{
+    color: white;
+    float: right;
+    background-color: orange;
+    text-align: center;
+    width: 5%;
+    margin-right: 80%;
+    margin-top: 3px;
+    font-size: 12px;
+    padding: 3px;
+}
+
+.detail img{
+    margin-top: 3%;
+    width: 40%;
+}
+
+.history h4{
+    margin-top: 3%;
+    margin-left: 5%;
+}
+
+.history .content{
+    background-color: rgb(204, 201, 201);
+    width: 90%;
+    height: 15vh;
+    margin-left: 5%;
+}
+
+.pay{
+    margin-top: 2%;
+    text-align: center;
+    font-size: 22px;
+}
+
+.pay #image{
+    margin-left: 43.3%;
+    width: 13%;
+}
+
+.pay button{
+    margin-bottom: 3%;
+    margin-top: 2%;
+}
+
+.detail input{
+    width: 70%;
+    border: none;
+    box-shadow: 0 2px 2px -2px gray;
+}
+
+.detail #nik{
+    width: 143%;
+}
+
+.detail #email{
+    width: 143%;
+}
+
+#payment{
+    cursor: pointer;
+}
