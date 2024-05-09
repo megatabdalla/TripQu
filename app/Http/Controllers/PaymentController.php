@@ -7,23 +7,17 @@ use App\Models\Ferry;
 
 class PaymentController extends Controller
 {
-    // public function index()
-    // {
-    //     return view('payment', [
-    //         'title' => 'TripQu | payment',
-    //         'ferry' => Ferry::filter()->get()
-    //     ]);
-    // }
-
     public function con(Request $request)
     {
         $data['title'] = 'TripQu | Payment';
         $query = Ferry::query();
 
-        // dd($request->all ());
-        $data['pay'] = $query->get();
+        if(request()->has('ferryID'))
+        {
+            $query->where('id', 'like', '%' . request('ferryID') . '%');
+        }  
 
-        // dd($ferries);
+        $data['pay'] = $query->get();
         return view('payment', $data);
     }
 }

@@ -2,10 +2,6 @@
     background-color: #697efe;
 }
 
-.container{
-    margin-left: 4%;
-}
-
 .navbar a{
     color: white;
     font-family: 'Poppins', sans-serif;
@@ -15,12 +11,7 @@
     color: #B6FFFA;
 }
 
-.navbar-brand{
-    margin-right: 47%; 
-}
-
 .navbar-text{
-    margin-right: -65%;
     color: white;
     font-family: 'Poppins', sans-serif;
 }
@@ -44,9 +35,28 @@ body{
     font-size: 30px;
   }
 
-h6{
-    margin-top: 2%;
-    color: black;
+.header h6{
+    text-align: center;
+    font-size: 1em;
+}
+
+.header h2{
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.header h3{
+    text-align: left;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.header h1{
+    margin-left: 5%;
+    text-align: left;
+    font-size: 2em;
+    font-weight: bold;
 }
 
 a{
@@ -231,7 +241,7 @@ button{
     width: 12%;
     color: white;
     padding: 1%;
-    margin-top: -1167px;
+    margin-top: -338px;
     margin-left: 15%;
     height: 122.5vh;
 }

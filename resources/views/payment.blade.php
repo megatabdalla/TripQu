@@ -7,6 +7,9 @@
     </div>
 
     <div class="detail">
+        @if($errors->any())
+    {{ implode('', $errors->all('<div>:message</div>')) }}
+@endif
         @foreach ($pay as $item)
             <h5><b>Departure</b></h5>
             <div class="row">
@@ -16,7 +19,7 @@
                     </span>
                 </div>
                 <div class="col" style="font-size: 20px; margin-left: -89%; margin-top:-2px">
-                    <b>{{ Carbon\Carbon::parse($item->berangkat)->format('h:i') }}</b>
+                    <b>{{ Carbon\Carbon::parse($item->berangkat)->format('H:i') }}</b>
                 </div>
                 <div class="col" style="font-size: 16px; margin-left: -85%; margin-top: 2px">
                     <b>{{ ($item->asal) }}</b>
@@ -43,7 +46,7 @@
                     </span>
                 </div>
                 <div class="col" style="font-size: 20px; margin-left: -89%; margin-top:-2px">
-                    <b>{{ Carbon\Carbon::parse($item->sampai)->format('h:i') }}</b>
+                    <b>{{ Carbon\Carbon::parse($item->sampai)->format('H:i') }}</b>
                 </div>
                 <div class="col" style="font-size: 16px; margin-left: -85%; margin-top: 2px;;">
                     <b>{{ ($item->tujuan) }}</b>
@@ -128,7 +131,7 @@
                                 {{ $message }}
                             </div>
                         @enderror
-                        <input class="form-control" type="hidden" name="FerryID" value="{{ $item->id }}">
+                        <input class="form-control" type="hidden" name="ferryID" value="{{ $item->id }}">
                         <button type="submit">BOOK</button>
                     </div>
                 </div>  

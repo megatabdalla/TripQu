@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('ferries', function (Blueprint $table) {
             $table->id();
-            $table->foreignID('agenID');
-            $table->char('namaKapal');
+            $table->string('namaAgen');
+            $table->string('namaKapal');
             $table->time('berangkat');
             $table->time('sampai');
             $table->string('kelas');

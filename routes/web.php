@@ -11,6 +11,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ReceiptController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\kirimTiketController;
+use App\Http\Controllers\DatuserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,6 +42,7 @@ Route::middleware(['auth'])->group(function(){
     Route::post('/logout', [AuthController::class, 'logout']);
     Route::get('/del/{id}', [ReceiptController::class, 'deny'])->name('delete');
     Route::get('/acctiket', [kirimTiketController::class, 'index'])->middleware('userAccess:Admin');
+    Route::get('/datauser', [DatuserController::class, 'index'])->middleware('userAccess:Admin');
 });
 
 Route::get('/search', [SearchController::class, 'srch']);

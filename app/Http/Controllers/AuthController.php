@@ -31,7 +31,6 @@ class AuthController extends Controller
             'email' => 'required|unique:users',
             'nik' => 'required|unique:users',
             'password' => 'required|min:8|max:12',
-            'conpass' => 'required'
         ]);
 
         // $validatedData['password'] = bcrypt($validatedData['password']);

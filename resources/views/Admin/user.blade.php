@@ -907,28 +907,24 @@
                                 <th>Nama Belakang</th>
                                 <th>NIK</th>
                                 <th>Email</th>
-                                <th>Ferry</th>
-                                <th>Bukti Transfer</th>
+                                <th>Role</th>
                                 <th>Action</th>
                             </tr>
-                            @foreach ($booking as $item)
+                            @foreach ($user as $item)
                             <tr>
                                         <td style="text-align: center">{{ $item->id }}</td>
                                         <td>{{ $item->name }}</td>
                                         <td>{{ $item->surname }}</td>
                                         <td>{{ $item->nik }}</td>
                                         <td>{{ $item->email }}</td>
-                                        <td style="text-align: center">{{ $item->ferryID }}</td>
-                                        <td style="text-align: center"><a href="{{ asset('struk/' . $item->buktitf) }}" target="_blank">Link to File</a></td>
+                                        <td>{{ $item->role }}</td>
                                         <td style="text-align: center">
                                             <button class="acc" onclick="location.href='/acctiket'">
-                                                <span class="material-symbols-outlined">
-                                                done
-                                                </span>
+                                                Edit
                                             </button>
                                             <button class="deny" onclick="location.href='/del/{id}'">
                                                 <span class="material-symbols-outlined">
-                                                    close
+                                                    Del
                                                 </span>
                                             </button>
                                         </td>

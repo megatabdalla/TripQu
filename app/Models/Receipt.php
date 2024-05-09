@@ -11,13 +11,13 @@ class Receipt extends Model
 
     protected $guarded = ['id'];
 
-    public function Ferry()
+    public function ferry()
     {
-        return $this->belongsTo(Ferry::class, 'id', 'FerryID');
+        return $this->hasOne(Ferry::class, 'id', 'ferryID');
     }
 
-    public function User()
+    public function books()
     {
-        return $this->belongsTo(User::class, 'id', 'userID');
+        return $this->belongsTo(Booking::class);
     }
 }

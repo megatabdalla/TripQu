@@ -12,16 +12,16 @@ class Ferry extends Model
 
     protected $guarded = ['id'];
 
-    public function scopeFilter($query)
-    {
-        if (request('cari'))
-        {
-            return $query -> where('date', 'like', '%' . request('cari') . '%');
-        }
-    }
+    // public function scopeFilter($query)
+    // {
+    //     if (request('cari'))
+    //     {
+    //         return $query -> where('date', 'like', '%' . request('cari') . '%');
+    //     }
+    // }
 
-    public function Agen()
+    public function receipt()
     {
-        return $this->belongsTo(Agen::class);
+        return $this->belongsTo(Receipt::class, 'ferryID', 'id');
     }
 }

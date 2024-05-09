@@ -13,13 +13,15 @@ return new class extends Migration
     {
         Schema::create('receipts', function (Blueprint $table) {
             $table->id();
-            $table->foreignID('FerryID');
+            $table->foreignId('ferryID');
             $table->string('name');
             $table->string('surname');
             $table->string('nik');
             $table->string('email');
             $table->string('buktitf')->nullable;
             $table->timestamps();
+
+            $table->foreign('ferryID')->references('id')->on('ferries');
         });
     }
 

@@ -15,11 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('surname');
-            $table->char('nik');
+            $table->char('nik')->unique()->nullable();
             $table->string('email')->unique();
             $table->string('password');
-            $table->string('conpass');
-            $table->enum('role', ['User', 'Admin', 'Agen']);
+            $table->enum('role', ['User', 'Admin']);
             $table->rememberToken();
             $table->timestamps();
         });

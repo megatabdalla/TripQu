@@ -3,6 +3,7 @@
 @section('body')
 
     <div class="header" style="height: 50vh">
+      <h3>Join us now, <br>to make you at ease</h3>
     </div>
 
     <div class="Auth">
@@ -47,12 +48,6 @@
                 <div class="mb-3">
                   <label for="pass" class="form-label">Password</label>
                   <input type="password" class="form-control" name="password" placeholder="Password">
-                </div>
-              </div>
-              <div class="col">
-                <div class="mb-3">
-                  <label for="conpass" class="form-label">Confirm Password</label>
-                  <input type="password" class="form-control" name="conpass" placeholder="Confirm Password">
                 </div>
               </div>
             </div>

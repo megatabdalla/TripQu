@@ -18,23 +18,22 @@ class ReceiptController extends Controller
     public function book(Request $request)
     {
         // return $request->file('buktitf')->store('bukti-tf');
-
+        
         $validatedData = $request->validate([
             'name' => 'required',
             'surname' => 'required',
             'nik' => 'required',
             'email' => 'required',
             'buktitf' => 'image|file|max:1024|mimes:jpg,jpeg,png',
-            'FerryID' => 'required',
+            'ferryID' => 'required',
         ]);
-
         $receipt= new Receipt();
 
         $receipt->name = $request->name;
         $receipt->surname = $request->surname;
         $receipt->nik = $request->nik;
         $receipt->email=$request->email;
-        $receipt->FerryID = $request->FerryID;
+        $receipt->ferryID = $request->ferryID;
 
         //upload file
         $imageEXT = $request->file('buktitf')->getClientOriginalName(); // mendapatkan nama tanpa exstention
@@ -47,7 +46,7 @@ class ReceiptController extends Controller
         $receipt->buktitf = $fileimage;
 
         $receipt->save();
-
+        
         return redirect('/');
     }
 

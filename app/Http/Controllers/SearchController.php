@@ -12,7 +12,6 @@ class SearchController extends Controller
     public function index()
     {
         return([
-            "title" => "Ferry Schedule",
             "ferry" => Ferry::filter()->get()
         ]);
     }
@@ -21,8 +20,8 @@ class SearchController extends Controller
     {
 
         $data['keyword'] = $request->all();
-        $data['kelas'] = Ferry::pluck('kelas')->unique();
-        $data['title'] = 'Hasil pencarian dari ';
+        $data['kelas'] = Ferry::pluck('kelas');
+        $data['title'] = 'TripQu | Ferries';
         $query = Ferry::query();
 
         if (request()->has('From')) {
@@ -34,15 +33,17 @@ class SearchController extends Controller
         }
 
         if (request()->has('Date')) {
-            $query->orWhereDate('tanggal', request('Date'));
+            $query->whereDate('tanggal', request('Date'));
+        }
+
+        if (request()->has('kelas')) {
+            $query->where('kelas', 'like', '%' . request('kelas') . '%');
         }
 
         // dd($request->all ());
         $data['result'] = $query->get();
 
         // ->where('kelas', 'like', '%' . $request->kelas . '%');
-
-        // dd($ferries);
         return view('search-result', $data);
     }
 }

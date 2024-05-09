@@ -12,8 +12,6 @@
         </div>
     </div>
 
-
-
     <div class="tgl">
         <div class="row">
             <div class="col">
@@ -46,10 +44,10 @@
                     <div class="row">
                         <div class="col">
                             <img src="img/dumai.png" alt="Dumai Express" style="margin-right: 2%">
-                            <b>Dumai Line</b>
+                            <b>{{ $item->namaKapal }}</b>
                         </div>
                         <div class="col">
-                            <b style="font-size: 20px">{{ Carbon\Carbon::parse($item->berangkat)->format('h:i') }}</b><br>
+                            <b style="font-size: 20px">{{ Carbon\Carbon::parse($item->berangkat)->format('H:i') }}</b><br>
                             {{ Carbon\Carbon::parse($item->tanggal)->isoFormat('dddd, D MMMM Y') }}
                         </div>
                         <div class="col" style="margin-left: -7%;">
@@ -59,7 +57,7 @@
                             </span>
                         </div>
                         <div class="col">
-                            <b style="font-size: 20px">{{ Carbon\Carbon::parse($item->sampai)->format('h:i') }}</b><br>
+                            <b style="font-size: 20px">{{ Carbon\Carbon::parse($item->sampai)->format('H:i') }}</b><br>
                             {{ Carbon\Carbon::parse($item->tanggal)->isoFormat('dddd, D MMMM Y') }}
                         </div>
                         <div class="col" style="font-size: 20px; margin-right: -5%;">
@@ -68,7 +66,7 @@
                     </div>
                     <div class="row mt-3">
                         <div class="col" style="margin-left: 7%;">
-                            <b>Dumai Express <br>Group</b>
+                            <b>{{ $item->namaAgen }}</b>
                         </div>
                         <div class="col" style="margin-left: -4.5%; font-size: 18px">
                             {{ $item->asal }}
@@ -80,14 +78,70 @@
                             {{ $item->tujuan }}
                         </div>
                         <div class="col">
-                            <a href="/pay"><button class="book"><b>BOOKING</b></button></a>
+                            <form action="/pay">
+                            @csrf
+                                <input class="form-control" type="hidden" name="ferryID" value="{{ $item->id }}">
+                                <button class="book" type="submit"><b>BOOKING</b></button>
+                            </form>
                         </div>
                     </div>
                 </div>
                 <hr style="background-color:white; height: 8px;">
             @endforeach
         </div>
+    </div>
 
+    <div class="filter">
+        <h4>FILTERS</h4>
+        <p>Price Range</p>
+        {{-- <label for="harga" class="form-label">Price Range</label> --}}
+        <input type="range" class="form-range" min="0" max="10" step="0.2" id="harga">
+        <p>Depart Time</p>
+        <button>
+            <span class="material-symbols-outlined">
+              partly_cloudy_day
+             </span>
+            Before 6am
+        </button>
+        <button>
+            <span class="material-symbols-outlined">
+                sunny
+            </span>
+            12pm - 6pm
+        </button>
+        <button>
+            <span class="material-symbols-outlined">
+              cloud
+            </span>
+            After 6pm
+        </button>
+        <button>
+            <span class="material-symbols-outlined">
+              nights_stay
+            </span>
+            Before 6am
+        </button>
 
+        <p>Ship</p>
+        <div class="agen">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Batam jet
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Dumai Express
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Miko Natalia
+                </label>
+            </div>
+        </div>
     </div>
 @endsection

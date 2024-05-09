@@ -22,48 +22,44 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-tq">
-        <div class="container">
-            <a class="navbar-brand" href="/">TripQu</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-md bg-tq px-4">
+        <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">TripQu</a>
+                </li>
+            </ul>
+        </div>
+        <div class="container mx-auto order-0">
+            <a class="mx-auto" href="#">Ship Schedule</a>
+            <a class="mx-auto" href="#">Account</a>
+            <a class="mx-auto" href="#">Booking History</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/schedule">Ship Schedule</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Account</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/history">Booking History</a>
-                    </li>
-                </ul>
+        </div>
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2 justify-content-end">
+            <div class="navbar-nav ml-auto">
                 @auth
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">Welcome back, {{ auth()->user()->name }}
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <form action="/logout" method="POST">
-                                    @csrf
-                                    <button type="submit" class="dropdown-item"><i
-                                            class="bi bi-box-arrow-right"></i>Log Out</button>
-                                </form>
-                            </li>
-                        </ul>
-                    </li>
+                <li class="nav-item dropdown me-auto justify-content-end">
+                    <a class="nav-link dropdown-toggle me-auto" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">Welcome back, {{ auth()->user()->name }}
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <form action="/logout" method="POST">
+                                @csrf
+                                <button type="submit" class="dropdown-item"><i
+                                        class="bi bi-box-arrow-right"></i>Log Out</button>
+                            </form>
+                        </li>
+                    </ul>
+                </li>
                 @else
-                    <span class="material-symbols-outlined">
-                        account_circle
-                    </span>
-                    <span class="navbar-text">
-                        <a href="/login" style="color: white">Log In</a>
-                        <a href="/register"><button type="button">Register</button></a>
-                    </span>
+                    <div class="container">
+                        <a href="/login">Log In</a>
+                        <a href="/register">Register</a>
+                    </div>
                 @endauth
             </div>
         </div>

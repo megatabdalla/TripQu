@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Ferry;
 use Illuminate\Http\Request;
-use App\Models\Kota;
 
 class HomeController extends Controller
 {

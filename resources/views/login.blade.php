@@ -3,19 +3,10 @@
 @section('body')
 
     <div class="header" style="height: 50vh">
+        <h1>Ready to explore?</h1>
     </div>
 
     <div class="Auth">
-        {{-- @if (count($errors) > 0)
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif --}}
-
         @if(session()->has('success'))
             <div class="alert alert-primary alert-dismissable fade show" role="alert">
                 {{ session('success') }}

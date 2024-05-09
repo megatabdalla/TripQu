@@ -1,9 +1,15 @@
 @extends('layouts.main')
 
 @section('body')
-    <div class="header">
-        <h2>Good morning, where do you want to go?</h2>
-        <h6><b>Explore now</b></h6>
+    <div class="header" style="background-image: url('img/kapal.jpg'); background-size: cover; background-position:center center; background-blend-mode: darken">
+        <h6>Explore with TripQu</h6>
+        @php
+          $t=date("H");
+          if($t < 12) $message = 'morning';
+          else if($t < 18) $message = 'afternoon';
+          else $message = 'evening';
+        @endphp
+        <h2>Good {{ $message }}, where do you want to go?</h2>
     </div>
 
     <form action="/search" name="cari">
