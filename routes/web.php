@@ -41,7 +41,7 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/receipt', [ReceiptController::class, 'index'])->middleware('userAccess:Admin');
     Route::post('/logout', [AuthController::class, 'logout']);
     Route::get('/del/{id}', [ReceiptController::class, 'deny'])->name('delete');
-    Route::get('/acctiket', [kirimTiketController::class, 'index'])->middleware('userAccess:Admin');
+    Route::get('/acctiket/{id}', [kirimTiketController::class, 'index'])->middleware('userAccess:Admin');
     Route::get('/datauser', [DatuserController::class, 'index'])->middleware('userAccess:Admin');
 });
 

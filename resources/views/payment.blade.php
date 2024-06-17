@@ -8,8 +8,8 @@
 
     <div class="detail">
         @if($errors->any())
-    {{ implode('', $errors->all('<div>:message</div>')) }}
-@endif
+            {{ implode('', $errors->all('<div>:message</div>')) }}
+        @endif
         @foreach ($pay as $item)
             <h5><b>Departure</b></h5>
             <div class="row">

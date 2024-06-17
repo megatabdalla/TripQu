@@ -911,9 +911,12 @@
                                 <th>Bukti Transfer</th>
                                 <th>Action</th>
                             </tr>
+                            @php
+                                $no = 1;
+                            @endphp
                             @foreach ($booking as $item)
                             <tr>
-                                        <td style="text-align: center">{{ $item->id }}</td>
+                                        <td style="text-align: center">{{ $no++ }}</td>
                                         <td>{{ $item->name }}</td>
                                         <td>{{ $item->surname }}</td>
                                         <td>{{ $item->nik }}</td>
@@ -921,12 +924,12 @@
                                         <td style="text-align: center">{{ $item->ferryID }}</td>
                                         <td style="text-align: center"><a href="{{ asset('struk/' . $item->buktitf) }}" target="_blank">Link to File</a></td>
                                         <td style="text-align: center">
-                                            <button class="acc" onclick="location.href='/acctiket'">
+                                            <button class="acc" onclick="location.href='/acctiket/{{ $item->ferryID }}'">
                                                 <span class="material-symbols-outlined">
                                                 done
                                                 </span>
                                             </button>
-                                            <button class="deny" onclick="location.href='/del/{id}'">
+                                            <button class="deny" onclick="location.href='/del/{{ $item->id }}'">
                                                 <span class="material-symbols-outlined">
                                                     close
                                                 </span>

@@ -31,10 +31,16 @@ class kirimTiket extends Mailable
     public function build()
     {
         $data = [
-            'pen' => User::all(),
             'cust' => Receipt::all(),
-            'ferry' => Ferry::all(),
         ];
+        $query = Ferry::query();
+
+        if(request()->has('ferryID'))
+        {
+            $query->where('id', 'like', '%' . request('ferryID') . '%');
+        }  
+
+        $data['tik'] = $query->get();
 
         return $this->subject($this->tiket['judul'])
                     ->from($this->tiket['sender'])
